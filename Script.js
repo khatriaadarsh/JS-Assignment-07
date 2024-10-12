@@ -151,13 +151,45 @@ var after = setDayOfWeak(d, 2);
 console.log("After: " + after);
 
 
-
-
-
-
-
-
-
-
 // 12. Write a JavaScript function to change the minutes of a given time to a specific value. (Value by prompt)
+
+function changeMinute() {
+    var currentDate = new Date();
+    var userChoice = +prompt("Enter the new minutes (0-59): ");
+    if (userChoice >= 0 && userChoice <= 59) {
+        currentDate.setMinutes(userChoice);
+        console.log("Updated Time: " + currentDate.toLocaleTimeString());
+    } else {
+        console.log("Invalid input. Please enter a number between 0 to 59")
+    }
+}
+
+changeMinute()
+
+// 13. Write a JavaScript function to add a specific number of hours to a given time.
+
+function addHours() {
+    var d = new Date();
+    d.setHours(2);
+    console.log(d)
+}
+
+addHours();
+
+
+// 14. You have to create a age calculator in JavaScript.
+
+var d = new Date();
+
+var userAge = +prompt("Enter your age: ");
+
+var eligible = d - userAge;
+
+if (userAge >= 18 && userAge <= 59) {
+    console.log("You are eligible CNIC")
+} else if (userAge >= 12 && userAge <= 17) {
+    console.log("You are eligible for smart card")
+} else {
+    console.log("You are not eligible");
+}
 
