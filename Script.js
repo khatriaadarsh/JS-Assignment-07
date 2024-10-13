@@ -193,3 +193,84 @@ if (userAge >= 18 && userAge <= 59) {
     console.log("You are not eligible");
 }
 
+// ==============> Chapter 35 - 37 (Functions) <================
+
+// 1. Code the first line of a function displayAlert.
+
+function message() {
+    alert("Alert Displayed!");
+}
+message();
+
+
+// 2. Code a function named askName that prompts the user to
+// Enter name and assigns the answer to userName, which
+// hasn't been declared beforehand.
+
+function askName(name) {
+    console.log("My name is:" + name);
+}
+
+console.log(prompt("Enter your name: "));
+
+// 3. Code a function that calls 2 other functions.
+
+function firstFunc(name) {
+    console.log(`Hello: ${name}!`);
+}
+
+function secondFunc(name) {
+    console.log(`Goodbye: ${name}!`);
+}
+
+function main(name) {
+    firstFunc(name)
+    secondFunc(name)
+}
+
+main("Aadarsh Kumar")
+
+
+// 4. Code a function that displays a prompt, Enter name and
+// then displays the name in an alert. Call the function.
+
+function display() {
+    var name = prompt("Enter your name: ");
+    alert(`My name is: ${name}`);
+}
+
+display()
+
+// 5. Code the first line of a function named concat that has 3
+// parameters, the first three letters of the alphabet. Call that
+// takes a variable, a string, and a number as arguments.
+
+function concat(char01, char02, char03) {
+    console.log(`${char01} ${char02} ${char03}`);
+}
+
+concat(101, "Aadarsh", "SMI University")  //Calling function
+
+// 6. Code a function that has 2 parameters. Concatenate them
+// and assign the result to a variable that hasn't been declared beforehand.
+
+function concatenate(firstName, lastName) {
+    var fullName = firstName + " " + lastName;
+    console.log("My fullname is: " + fullName);
+}
+
+concatenate("Aadarsh", "Kumar");
+
+
+// 7. Code a function that has three parameters. Multiply them
+// and assign them to a variable that hasn't been declared yet.
+
+function multiplication(numOne, numTwo, numThree) {
+    var multiplied = numOne * numTwo * numThree;
+    console.log(multiplied)
+}
+
+multiplication(3, 3, 3);
+
+// 8. Write a JavaScript function that takes an array of numbers as input and returns the average of those numbers.
+
