@@ -274,3 +274,201 @@ multiplication(3, 3, 3);
 
 // 8. Write a JavaScript function that takes an array of numbers as input and returns the average of those numbers.
 
+function averageOfNumbers() {
+    var arr = [11, 22, 33, 44, 55];
+    var sum = 0;
+    for (i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum / arr.length;
+}
+console.log(averageOfNumbers());
+
+
+// 9. Write a JavaScript function that takes two parameters and returns their sum.
+
+function addTwoNumber(numOne, numTwo) {
+    return `Sum: ${numOne + numTwo}`;
+}
+console.log(addTwoNumber(2, 3));
+
+// 10. Write a JavaScript function that takes an array of numbers as input and returns the average of those numbers.
+
+ function averageOfNumbers() {
+    var arr = [11, 22, 33, 44, 55];
+    var sum = 0;
+    for (i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum / arr.length;
+}
+console.log(averageOfNumbers());
+
+
+// 11. You have to capture the returned value from a function and store it in a variable?
+
+function value(val) {
+    return `First value: ${val}`
+}
+
+var enteredVal = value(3232);
+
+console.log(enteredVal)
+
+
+// 12. Write a function which tells letter counts of (word).
+
+function counts(word) {
+    for (var i = 0; i < word.length; i++) {
+        console.log(i, word[i])
+    }
+}
+
+counts("Aadarsh")
+
+// 13. Write a function to set (year) in date object.
+
+function getYear() {
+    var year = new Date().getFullYear();
+    console.log(year)
+}
+
+getYear();
+
+// 14. Write a function which tells the age of a person who Born on (dateOfBirth)
+
+function dateOfBirth() {
+    var yearsOld = 21;
+    var currentYear = new Date().getFullYear();
+    var birthYear = currentYear - yearsOld;
+    return birthYear;
+}
+
+console.log("Your year birth is: " + dateOfBirth())
+
+
+
+// 15. Write a function which tells the presense of (word) in an array 
+// result should be in true or false
+
+function findWord() {
+    var arr = ['zaid', 'haris', 'raza', 'abubakar', 'hassan', 'hussain', 'fatima']
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] == "raza") {
+            return true
+        }
+    }
+    return false;
+}
+console.log(findWord())
+
+
+// 16. Write a function which repeat (letter) 10 times. Hint: 'abcde' str.repeat(10)
+
+function repeatLetter() {
+    var str = " Aadarsh Kumar"
+    var repeated = str.repeat(5);
+    console.log(str, "\n String repeats: ", repeated)
+}
+repeatLetter()
+
+
+// 17. write a function which reverse array = ['a', 'b', 'c', 'd', 'e'] Hint: arr.reverse()
+
+var arr = ['a', 'b', 'c', 'd', 'e'];
+
+arr.reverse();
+
+console.log(arr)  // Output: [ 'e', 'd', 'c', 'b', 'a' ]
+
+
+
+//=================> Chapter 38 (Local vs. Global Variables) <==================
+
+// 1. Write a JavaScript function that demonstrates the usage of a local variable.
+
+
+function socpe() {
+    var local = "This is local variable inside function"
+    console.log(local);
+}
+
+console.log(socpe()) // This is local variable inside function
+
+console.log(myName) // ReferenceError: myName is not defined
+
+
+// 2. How can you access a global variable inside a function in JavaScript?
+
+function globalScope() {
+    var global = "This is global variable"
+    console.log(global); // This is global variable
+
+    function inside() {
+        var str = "This is local variable inside a function"
+        console.log(str)
+    }
+    inside() // This is local variable inside a function
+    console.log(str); //ReferenceError: str is not defined
+}
+
+globalScope();
+
+
+//==============> Chapter 39, 40 (Switch Statements) <======================
+
+// 1. Write a JavaScript switch statement that checks the value of a variable and performs different actions based on different cases.
+
+function checkDay(day) {
+    switch (day) {
+        case "Monday":
+            console.log("Monday is working day!");
+            break;
+        case "Tuesday":
+            console.log("Tuesday is working day!");
+            break;
+        case "Wednesday":
+            console.log("Wednesday is working day!");
+            break;
+        case "Thuesday":
+            console.log("Thuesday is working day!");
+            break;
+        case "Friday":
+            console.log("Friday is Half day");
+            break;
+        case "Saturday":
+            console.log("Saturday is weekend");
+            break;
+        case "Sunday":
+            console.log("Sunday is weekend");
+            break;
+        default:
+            console.log("Invalid day");
+    }
+}
+
+checkDay("Sunday");
+
+
+// 2. Write a JavaScript switch statement that check whether cityName given by user check the cityName if match alert the user and
+// break the statement, if not default message will be shown to user.
+
+function cityCheck(city) {
+    switch (city) {
+        case "Karachi":
+            console.log("Welcome to City of Light! Karachi");
+            break;
+        case "Lahore":
+            console.log("Welcome to Lahore");
+            break;
+        case "Islamabad":
+            console.log("Welcome to Islamabad");
+            break;
+        default:
+            console.log("Ivalid City");
+    }
+}
+
+cityCheck("Karachi")
+
+// ================= THE END =================
