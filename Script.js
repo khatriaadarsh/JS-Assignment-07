@@ -472,3 +472,130 @@ function cityCheck(city) {
 cityCheck("Karachi")
 
 // ================= THE END =================
+
+
+
+// ===========> FUNCTIONS, SWITCH STATEMENTS, WHILE... DO-WHILE LOOPS <======================
+
+// 1. Write a custom function power ( a, b ), to calculate the value of a raised to b.
+
+function power(a, b) {
+    return a ** b;
+}
+console.log(power(3, 3)) // Output: 27
+
+// 2. Any year is entered through the keyboard. Write a function to determine whether the year is a leap year or not.
+// Leap years ..., 2012, 2016, 2020, ...
+
+function checkLeapYear(year) {
+    if (year % 4 === 0) {
+        console.log(`${year} is leap year!`);
+    } else {
+        console.log(`${year} is not leap year.`);
+    }
+}
+
+checkLeapYear(+prompt("Enter year: "))
+
+
+// 3. If the lengths of the sides of a triangle are denoted by a, b, and
+// c, then area of triangle is given by
+// area = S(S − a)(S − b)(S − c)
+// where, S = ( a + b + c ) / 2
+
+function areaOfTriangle(a, b, c) {
+    var S = (a + b + c) / 2;
+    var area = S * (S - a) * (S - b) * (S - c)
+    return `Area of Triangle: ${area}`
+}
+console.log(areaOfTriangle(2, 3, 4))
+
+
+// 4. Write a function that receives marks received by a student in 3  subjects and returns the average and percentage of these
+// marks. there should be 3 functions one is the mainFunction and other are for average and percentage. Call those functions
+// from mainFunction and display result in mainFunction.
+
+
+function studentMarks(marks01, marks02, marks03) {
+    function averageMarks() {
+        return (marks01 + marks02 + marks03) / 3;
+    }
+
+    function percentageMarks() {
+        return ((marks01 + marks02 + marks03) / 300) * 100;
+    }
+    console.log("Average: " + averageMarks());
+    console.log("Percentage: " + percentageMarks());
+}
+
+studentMarks(60, 70, 80);
+
+
+// 5. You have learned the function indexOf. Code your own custom function that will perform the same functionality. You can code
+// for single character as of now.
+
+function indexOfChar(str, char) {
+    var condtion = 0;
+    for (var i = 0; i < str.length; i++) {
+        if (str[i] === char) {
+            console.log(i);
+            condtion = 1
+        }
+    }
+    if (condtion == 0) {
+        console.log("Character not found");
+    }
+}
+
+indexOfChar("Hello World", "o")
+
+// 6. Write a function to delete all vowels from a sentence. Assume
+// that the sentence is not more than 25 characters long.
+// a e i o u 
+
+function removeVowel(sentence) {
+    var convertToLower = sentence.toLocaleLowerCase();
+    for (var i = 0; i < convertToLower.length; i++) {
+        if (convertToLower[i] == 'a' && 'e' && 'i' && 'o' && 'u') {} else {
+            console.log(convertToLower[i])
+        }
+    }
+}
+removeVowel("Aadarsh Kumar");
+
+
+
+// 7. Write a function with switch statement to count the number of occurrences of any two vowels in succession in a line of text.
+// For example, in the sentence“ Pleases read this application and give me gratuity”
+// Such occurrences are ea, ea, ui.
+
+function isVowel(char) {
+    switch (char) {
+        case 'a':
+        case 'e':
+        case 'i':
+        case 'o':
+        case 'u':
+            return true;
+        default:
+            return false;
+    }
+}
+
+function countConsecutiveVowels(text) {
+    var count = 0;
+    var previousVowel = null;
+    for (var i = 0; i < text.length; i++) {
+        var currentChar = text[i].toLowerCase();
+        if (isVowel(currentChar)) {
+            count++
+        } else {
+            previousVowel = null;
+        }
+    }
+    return count;
+}
+
+var text = "Please read this application and give me gratuity";
+var vowelCount = countConsecutiveVowels(text);
+console.log("Number of consecutive vowel occurrences:", vowelCount); // Output: 3
