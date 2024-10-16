@@ -599,3 +599,84 @@ function countConsecutiveVowels(text) {
 var text = "Please read this application and give me gratuity";
 var vowelCount = countConsecutiveVowels(text);
 console.log("Number of consecutive vowel occurrences:", vowelCount); // Output: 3
+
+
+
+// 8. The distance between two cities (in km.) is input through the keyboard. Write four functions to convert and print this
+// distance in meters, feet, inches and centimeters.
+
+
+function distanceOfCities() {
+    var inKilometer = 15;
+    console.log("Distance in KM: " + inKilometer)
+
+    function inMeters() {
+        var meter = inKilometer * 1000;
+        console.log("Distance in Meter: " + meter);
+    }
+
+    function inFeet() {
+        var feet = inKilometer * 3280.83;
+        console.log("Distance in Feet: " + feet)
+    }
+
+    function inInches() {
+        var inches = inKilometer * 39370.10000000;
+        console.log("Distance in inches: " + inches);
+    }
+
+    function inCentimeters() {
+        var centimeters = inKilometer * 100000;
+        console.log("Distance in inches: " + centimeters)
+    }
+
+    inMeters();
+    inFeet();
+    inInches();
+    inCentimeters();
+}
+
+distanceOfCities();
+
+
+    
+// 9. Write a program to calculate overtime pay of employees.Overtime is paid at the rate of Rs. 12.00 per hour for every hour
+// worked above 40 hours. Assume that employees do not work for fractional part of an hour.
+
+
+function overTimeOfEmployee(hoursWorked, hourlyRate) {
+    var regularHours = 6;
+    var overTime = hoursWorked - regularHours;
+    var overTimePay = overTime * 12;
+    var totalPay = (regularHours * hourlyRate) + overTimePay;
+    console.log(totalPay)
+}
+overTimeOfEmployee(10, 30);
+
+
+
+// 10. A cashier has currency notes of denominations 10, 50 and 100. If the amount to be withdrawn is input through the
+// keyboard in hundreds, find the total number of currency notes of each denomination the cashier will have to give to the
+// withdrawer.
+
+
+function calculateNotes(amount) {
+    const denominations = [100, 50, 10];
+    const noteCounts = [0, 0, 0];
+
+    for (let i = 0; i < denominations.length; i++) {
+        const denomination = denominations[i];
+        const notes = Math.floor(amount / denomination);
+        noteCounts[i] = notes;
+        amount -= notes * denomination;
+    }
+
+    return noteCounts;
+}
+
+const withdrawalAmount = 350;
+const noteCounts = calculateNotes(withdrawalAmount);
+
+console.log("Number of 100 notes:", noteCounts[0]);
+console.log("Number of 50 notes:", noteCounts[1]);
+console.log("Number of 10 notes:", noteCounts[2]);
