@@ -680,3 +680,54 @@ const noteCounts = calculateNotes(withdrawalAmount);
 console.log("Number of 100 notes:", noteCounts[0]);
 console.log("Number of 50 notes:", noteCounts[1]);
 console.log("Number of 10 notes:", noteCounts[2]);
+
+
+
+// ================> Events 
+
+// 1. Show an alert box on click on a link.
+
+function popup() {
+    alert("Button clicked Alert!");
+}
+
+
+// 2. Display some Mobile images in browser. On click on an
+// image Show the message in alert to user.
+
+function showMessage() {
+    alert("Message from Image!")
+}
+
+
+// 4. Display an image in browser. Change the picture on mouseover and set the
+// first picture on mouseout.
+
+function imageChange() {
+    var image = document.getElementById("image");
+    image.src = "https://imgd.aeplcdn.com/370x208/n/cw/ec/139651/curvv-exterior-right-front-three-quarter.jpeg?isig=0&q=80"
+}
+
+function imageBack() {
+    var image = document.getElementById("image");
+    image.src = "https://img.lovepik.com/photo/48007/1949.jpg_wh300.jpg"
+}
+
+
+
+// 5. Show a counter in browser.Counter should increase on click on increase
+// button and decrease on click on decrease button.And show updated counter value in browser.
+
+var counter = 0;
+
+function increaseCounter() {
+    counter++;
+    document.getElementById("counterValue").textContent = counter;
+}
+
+function decreaseCounter() {
+    if (counter > 0) {
+        counter--;
+        document.getElementById("counterValue").textContent = counter;
+    }
+}
